@@ -10,8 +10,8 @@ package com.whirzl.mmc;
  */
 
 /*---------------------- Importing Java Classes -------------------------------*/
-import java.io.IOException;
 
+import java.io.IOException;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
