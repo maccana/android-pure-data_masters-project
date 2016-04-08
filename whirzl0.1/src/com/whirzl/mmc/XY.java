@@ -97,7 +97,7 @@ public class XY extends Activity implements OnTouchListener {
 		super.onResume();
 
 		/*
-		 * tests that the sample rate is at least the rate defined in thefinal
+		 * Tests that the sample rate is at least the rate defined in thefinal
 		 * SR variable
 		 */
 		if (AudioParameters.suggestSampleRate() < SAMPLE_RATE) {
@@ -110,7 +110,7 @@ public class XY extends Activity implements OnTouchListener {
 		if (nOut == 0) {
 
 			/*
-			 * if no channels are available toast displays string and runsthe
+			 * If no channels are available toast displays string and runsthe
 			 * finish() method
 			 */
 			toast("audio output not available; exiting");
@@ -145,10 +145,10 @@ public class XY extends Activity implements OnTouchListener {
 		case MotionEvent.ACTION_DOWN:
 			PdBase.sendBang("start");
 
-			// ACTION_MOVE used to capture XY screen positions
+		// ACTION_MOVE used to capture XY screen positions
 		case MotionEvent.ACTION_MOVE:
 
-			// Retreiving x and y coordinates of touch screen gestures
+			// Retreiving X and Y coordinates of touch screen gestures
 			x = me.getX();
 			y = me.getY();
 
@@ -170,8 +170,7 @@ public class XY extends Activity implements OnTouchListener {
 			 * Background colour is continuously changed while the user is
 			 * touching screen(x and y data re-used to vary the colours)
 			 */
-			mySurfaceView
-					.setBackgroundColor((int) (0xff000000 + x / 2 * 0x10000 + y / 4 * 0x100));
+			mySurfaceView.setBackgroundColor((int) (0xff000000 + x / 2 * 0x10000 + y / 4 * 0x100));
 		}
 		if (me.getAction() == MotionEvent.ACTION_UP) {
 
@@ -183,8 +182,7 @@ public class XY extends Activity implements OnTouchListener {
 	}
 
 	private void toast(String string) {
-		// TODO Auto-generated method stub
-
+		// Todo
 	}
 	
 
@@ -231,7 +229,7 @@ public class XY extends Activity implements OnTouchListener {
 
 		public void resume() {
 
-			// is running set to true when resume method is called
+			// isRunning set to true when resume method is called
 			isRunning = true;
 
 			// Thread finally starts here
