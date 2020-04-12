@@ -9,6 +9,7 @@ package com.whirzl.mmc;
  * menu, containing 'About' and a second 'Help' option, is available via the 
  * soft menu button on the device itself. 
  */
+
 /*---------------------- Importing Java Classes -----------------------------*/
 
 import android.R;
@@ -26,11 +27,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 
-
-
 /*------------------------ Main_Menu Activity -------------------------------*/
-
-
 
 public class Main_Menu extends Activity implements OnClickListener {
 	// private static final AlertDialog dialogBuilder = null;
@@ -51,10 +48,7 @@ public class Main_Menu extends Activity implements OnClickListener {
 	}
 	
 	
-
 /*------------------------- onCreate() ------------------------------*/
-
-	
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -70,26 +64,22 @@ public class Main_Menu extends Activity implements OnClickListener {
 
 /*------------------- onOptionsItemSelected() -----------------------*/
 
-	
 	public boolean onOptionsItemSelected(MenuItem item) {
 		AlertDialog.Builder ad = new AlertDialog.Builder(this);
 
 		// swith/case to handle clicks from inflated menu items
 		switch (item.getItemId()) {
-		//
 		case R.id.about_item:
 
 			// Setting the title and message of the about widget
 			ad.setTitle(R.string.about_title);
 			ad.setMessage(R.string.about_msg);
 			break;
-
 		// Setting the title and message of the help widget
 		case R.id.help_item:
 			ad.setTitle(R.string.help_title);
 			ad.setMessage(R.string.help_msg);
 			break;
-
 		default:
 			break;
 		}
@@ -102,10 +92,8 @@ public class Main_Menu extends Activity implements OnClickListener {
 	}
 	
 	
-
 /*----------------------- onClickView() ----------------------------*/
 
-	
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
