@@ -96,8 +96,6 @@ public class Main_Menu extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
-
 		// if/else statements to link button clicks to intents
 		if (v.getId() == (R.id.button1)) {
 			Intent a = new Intent(this, Browse.class);
