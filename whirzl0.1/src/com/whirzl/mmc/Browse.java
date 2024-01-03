@@ -24,9 +24,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-
-
-
 /*----------------------- Browser Activity Class -------------------------------*/
 
 public class Browse extends ListActivity {
@@ -47,11 +44,8 @@ public class Browse extends ListActivity {
 	 */
 	private TextView myPath;
 	
-	
-
 /*------------------------ onCreate() ---------------------------------*/
 
-	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -64,12 +58,8 @@ public class Browse extends ListActivity {
 		getDir(patchDir);
 
 	}
-	
-	
-
 /*------------------------- getDir() ----------------------------------*/
 
-	
 	private void getDir(String dPath) {
 
 		// Displays the path at top of list view
@@ -115,11 +105,8 @@ public class Browse extends ListActivity {
 		setListAdapter(fileList);
 	}
 	
-	
-
 /*---------------------- onListItemClicked() ---------------------------*/
 
-	
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 
@@ -138,9 +125,7 @@ public class Browse extends ListActivity {
 
 	}
 	
-
 /*-------------------------- initPd() ----------------------------------*/
-
 	
 	private void initPd(String filename) {
 
