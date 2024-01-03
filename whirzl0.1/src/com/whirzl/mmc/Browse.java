@@ -2,18 +2,17 @@ package com.whirzl.mmc;
 
 /*=============================================================================
  Browse Activity Class
+ This activity presents a list of the files from a specific directory on an Android 
+ devices sdcard and displays the name of the file when it is clicked.
  ==============================================================================*/
-/* This activity presents a list of the files on a chosen directory on the 
- * sdcard and shows the name of the file when clicked.*/
 
-/*----------------------Importing Java Classes--------------------------------*/
-
-//import java.io.File;
+// Java imports
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+// Android imports
 import android.R;
 import android.app.ListActivity;
 import android.content.Intent;
@@ -23,8 +22,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
-/*----------------------- Browser Activity Class -------------------------------*/
 
 public class Browse extends ListActivity {
 
@@ -38,34 +35,28 @@ public class Browse extends ListActivity {
 	// String to store the default patch directory
 	private String patchDir = "/sdcard/pd/patches/";
 
-	/*
-	 * The TextView object to display default directory path at the top of the
-	 * List View
-	 */
+	// The TextView object to display default directory path at the top of the List View 
 	private TextView myPath;
 	
-/*------------------------ onCreate() ---------------------------------*/
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.list);
 
-		// Simple text view to display the actual path to the patches directory
+		// Text view to display the actual path to the patches directory
 		myPath = (TextView) findViewById(R.id.path);
 
-		// Initializes getDir() and passes path string stores in patchDir
+		// Initialize getDir() and pass path string stores in patchDir
 		getDir(patchDir);
 
 	}
-/*------------------------- getDir() ----------------------------------*/
 
 	private void getDir(String dPath) {
 
 		// Displays the path at top of list view
 		myPath.setText("Location: " + dPath);
 
-		// new File variable 'f' to hold a raw list of all files in directory
+		// New File variable 'f' to hold a raw list of all files in directory
 		File f = new File(dPath);
 		File[] files = f.listFiles();
 
@@ -73,8 +64,7 @@ public class Browse extends ListActivity {
 		item = new ArrayList<String>();
 		path = new ArrayList<String>();
 
-		// if(!dPath.equals(patchDir)) // list everything in the patchDir but
-		// not the patchDir itself??
+		// if(!dPath.equals(patchDir)) // list everything in the patchDir but not the patchDir itself??
 
 		{
 			// Adding the data in patchDir to the item and path ArrayLists
@@ -88,24 +78,19 @@ public class Browse extends ListActivity {
 
 		}
 
-		// 'for' loop to get path and names of each file in path and item arrays
+		// Get the path and names of each file in path and item arrays
 		for (int i = 0; i < files.length; i++) {
 			File file = files[i];
-
 			path.add(file.getPath());
 			item.add(file.getName());
-
 		}
 
-		// Using ArrayAdapter to prepare fileList for display in the List View
-		ArrayAdapter<String> fileList = new ArrayAdapter<String>(this,
-				R.layout.list_row, item);
+		// ArrayAdapter to prepare fileList for display in the List View
+		ArrayAdapter<String> fileList = new ArrayAdapter<String>(this,R.layout.list_row, item);
 
-		// Setting the ListAdapter to display the files in the List View
+		// ListAdapter to display the files in the List View
 		setListAdapter(fileList);
 	}
-	
-/*---------------------- onListItemClicked() ---------------------------*/
 
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
@@ -125,16 +110,10 @@ public class Browse extends ListActivity {
 
 	}
 	
-/*-------------------------- initPd() ----------------------------------*/
-	
 	private void initPd(String filename) {
 
 		try {
-
-			/*
-			 * Passing the patch stored in the filename variable toopenPatch()
-			 * method
-			 */
+			// Pass the patch stored in the filename variable to openPatch() method
 			PdBase.openPatch(new File("", filename));
 
 		} catch (IOException e) {
