@@ -6,10 +6,9 @@
     <string name="splash_text">Pure Data Patch Player</string>
     <string name="app_name">Whirzl v.0.1</string>
     <string name="help_title">Help</string>
-	<string name="about_title">About</string>
-	<string name="about_msg">Whirzl v.0.1\nCopyright 2011 Michael McCann\n(whirzlapp@gmail.com)</string>
-	<string name="help_msg">To load a patch simply press the Load Patch button and select it in the Browser.\nPlay the selected patch by moving your finger 
-	    across the touch screen.\nNote:Pd patch must first be transfered to a directory named /sdcard/pd/patches/.Enjoy!
-		</string>
-
+    <string name="about_title">About</string>
+    <string name="about_msg">Whirzl v.0.1\nCopyright 2011 Michael McCann\n(whirzlapp@gmail.com)</string>
+    <string name="help_msg">To load a patch simply press the Load Patch button and select it in the Browser.\nPlay the selected patch by moving your finger 
+      across the touch screen.\nNote:Pd patch must first be transfered to a directory named /sdcard/pd/patches/.Enjoy!
+    </string>
 </resources>
