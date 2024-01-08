@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="background">#006666</color>
-   
-    
+    <color name="background">#006666</color>
     <string name="splash_text">Pure Data Patch Player</string>
     <string name="settings_title">About</string>
     <string name="splash_text">Pure Data Patch Player</string>
